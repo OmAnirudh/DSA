@@ -5,13 +5,16 @@ def testDetectLoop():
     A,B,C = Node(10),Node(20),Node(30)
     A.next=B
     B.next=C
-    C.next=A
+    C.next=B
     L = LinkedList()
     L.head = A
-    assert(L.detectLoop() is True)
+    #assert(L.detectLoop() is True)
+    #print(L.traverse())
+    print(L.detectLoop())   
+    
     C.next = None
  #   assert(L.detectLoop() is False)
-    print(L.traverse())
+    #print(L.traverse())
     print(L.detectLoop())
     
 

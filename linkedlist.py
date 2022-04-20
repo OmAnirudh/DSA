@@ -16,10 +16,13 @@ class LinkedList:
     def detectLoop(self):
         slow = self.head
         fast = self.head
-        while(fast.next and fast !=slow):
+        while(fast.next):
             fast = fast.next.next
-            slow = slow.next
-        return fast == slow
+            slow = slow.next      
+            if (slow ==fast):
+                return True
+
+        # return None
     
     def addAtFront(self,data):
         # temp = self.head
